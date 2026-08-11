@@ -1,0 +1,22 @@
+name = "LeanSafeHRC"
+version = "0.1.0"
+defaultTargets = ["LeanSafeHRC", "leansafehrc"]
+
+# LeanSafeHRC library containing the formal development,
+# executable monitor, correctness proofs, and case study.
+[[lean_lib]]
+name = "LeanSafeHRC"
+
+# Executable demonstration defined in Main.lean.
+# Run with:
+#
+#   lake exe leansafehrc
+#
+[[lean_exe]]
+name = "leansafehrc"
+root = "Main"
+
+# Lean mathematical library dependency.
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
